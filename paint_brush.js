@@ -12,6 +12,10 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255); // white background
   imageMode(CENTER);
+  textFont('Arial');
+  textSize(16);
+  fill(0);
+  noStroke();
 }
 
 function draw() {
@@ -20,6 +24,14 @@ function draw() {
     let size = random(20, 60);
     image(img, mouseX, mouseY, size, size);
   }
+
+  // Display instructions
+  noStroke();
+  fill(255, 255, 255, 180); // semi-transparent background
+  rect(10, 10, 320, 70);
+  fill(0);
+  text("Press 1, 2, or 3 to switch brushes", 20, 35);
+  text("Press 'S' to save your drawing", 20, 60);
 }
 
 function keyPressed() {
